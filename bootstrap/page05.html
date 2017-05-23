@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap 组件</title>
+    <!--使用本地库-->
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .test{
+            width: 300px;
+            height: 200px;
+            background: red;
+        }
+        /*使用媒体查询创建分界点阈值*/
+        @media screen and (max-width: 900px)and (min-width: 500px){
+            .test{
+                width: 100%;
+                height:100px;
+                background: dodgerblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<h2>Bootstrap 栅格系统实现响应式布局
+</h2>
+
+<p>列偏移</p>
+
+<div class="container">
+    <h4>列向右移动四列的间距</h4>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-2 col-md-offset-4">列向右移动四列的间距</div>
+        <div class="col-md-2">.col-md-3</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 col-md-offset-4">列向右移动四列的间距</div>
+    </div>
+</div>
+<br />
+<h4>发生行断裂</h4>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-2 col-md-offset-4">列向右移动四列的间距</div>
+        <div class="col-md-2">.col-md-3</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 col-md-offset-4">列向右移动四列的间距</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">.col-md-3</div>
+        <div class="col-md-3 col-md-offset-3">col-md-offset-3</div>
+        <div class="col-md-4">col-md-4</div>
+    </div>
+</div>
+
+
+<!--把JS文件引用放入body的最下面，是为了使js在网页全部加载完后才起作用，
+比如你的js里面有个alert，如果放在头部会因为弹出窗口等待用户确认而导致整个页面加载受影响。
+所以，通常做法，样式表通常放在head里而最先加载完毕，而js在body后。-->
+<!--bootstrap 依赖的JQuery库-->
+<!--必须先加载 jquery(jquery 版本>=1.9.1), 后加载 bootstrap-->
+<script src="js/jquery-3.2.1.min.js"></script>
+
+<!--bootstrap js-->
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

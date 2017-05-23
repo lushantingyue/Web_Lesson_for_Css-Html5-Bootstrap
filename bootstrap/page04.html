@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap 组件</title>
+    <!--使用本地库-->
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .test{
+            width: 300px;
+            height: 200px;
+            background: red;
+        }
+        /*使用媒体查询创建分界点阈值*/
+        @media screen and (max-width: 900px)and (min-width: 500px){
+            .test{
+                width: 100%;
+                height:100px;
+                background: dodgerblue;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>Bootstrap 组件
+</h2>
+<p>字体图标</p>
+<p>下拉菜单</p>
+<div class="dropdown">
+    <!--data-toggle绑定事件-->
+    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    这是按钮
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li>
+            <a href="http://www.imooc.com">
+                慕课网
+            </a>
+        </li>
+        <li>
+            <a href="http://www.imooc.com">
+                慕课网
+            </a>
+        </li>
+        <li>
+        <a href="http://www.imooc.com">
+            慕课网
+        </a>
+    </li>
+    </ul>
+</div>
+<p>控件组</p>
+<div class="input-group">
+    <span class="input-group-addon"><text class="glyphicon glyphicon-tag"></text></span>
+    <input type="text" class="form-control"></input>
+</div>
+<p>导航</p>
+<br>
+<ul class="nav nav-tabs">
+    <li class="active"><a href="page01.html">baidu</a></li>
+    <li><a href="page02.html">baidu</a></li>
+    <li><a href="page03.html">baidu</a></li>
+</ul>
+<ul class="nav nav-stack">
+<li class="active"><a href="page01.html">baidu</a></li>
+<li><a href="">baidu</a></li>
+<li><a href="">baidu</a></li>
+</ul>
+<ul class="nav nav-pills">
+    <li class="active"><a href="">baidu</a></li>
+    <li><a href="">baidu</a></li>
+    <li><a href="">baidu</a></li>
+</ul>
+<p>分页</p>
+<nav aria-label="Page navigation">
+    <!--pagination 表示此处划分分页-->
+    <ul class="pager">
+        <li class="previous">
+            <a href="#">向左</a>
+        </li>
+        <li class="next">
+            <a href="#">向右</a>
+        </li>
+    </ul>
+    <ul class="pagination">
+        <li>
+            <a href="#"aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+            <a href="#"aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<p>进度条</p>
+<br>
+<div class="progress">
+    <div class="progress-bar progress-bar-info progress-bar-striped" style="width:60%;">60%</div>
+</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-success" style="width:100%;">success</div>
+</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-warning progress-bar-striped" style="width:45%;">45%</div>
+</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-danger" style="width:20%;">failed</div>
+</div>
+<br>
+<p>列表</p>
+<ul class="list-group">
+   <li class="list-group-item active">
+       this is a list
+       <span class="badge">
+           16
+       </span>
+   </li>
+    <li class="list-group-item">
+        this is a list
+        <span class="badge">
+           16
+       </span>
+    </li>
+    <li class="list-group-item list-group-item-info">
+        this is a list
+        <span class="badge">
+            16
+        </span>
+    </li>
+    <li class="list-group-item list-group-item-danger">
+        this is a list
+    <span class="badge">16</span>
+    </li>
+</ul>
+<br>
+<p>面板</p>
+<div class="panel panel-primary">
+    <div class="panel-heading">弹出层！</div>
+    <div class="panel-body">这是面板内容</div>
+    <div class="panel-footer">脚注</div>
+</div>
+<div class="panel panel-warning">
+    <div class="panel-heading">弹出层！</div>
+    <div class="panel-body">这是面板内容</div>
+    <div class="panel-footer">脚注</div>
+</div>
+<div class="panel panel-success">
+    <div class="panel-heading">弹出层！</div>
+    <div class="panel-body">这是面板内容</div>
+    <div class="panel-footer">脚注</div>
+</div>
+
+
+<!--把JS文件引用放入body的最下面，是为了使js在网页全部加载完后才起作用，
+比如你的js里面有个alert，如果放在头部会因为弹出窗口等待用户确认而导致整个页面加载受影响。
+所以，通常做法，样式表通常放在head里而最先加载完毕，而js在body后。-->
+<!--bootstrap 依赖的JQuery库-->
+<!--必须先加载 jquery(jquery 版本>=1.9.1), 后加载 bootstrap-->
+<script src="js/jquery-3.2.1.min.js"></script>
+
+<!--bootstrap js-->
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

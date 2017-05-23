@@ -1,0 +1,5 @@
+/*属性选择器 定义包含col-的所有属性*/
+[class *= col-]{
+    background-color: #a6e1ec;
+    border:1px solid #cccccc;
+}
