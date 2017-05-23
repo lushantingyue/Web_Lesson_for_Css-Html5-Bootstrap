@@ -26,3 +26,24 @@
   }
 
 }
+
+// @arguments 包含了所有传进来的参数, 简化了传参的写法
+.border_arg(@w:2px,@c:red,@xx:solid) {
+  border: @arguments;
+}
+
+.test_arguments {
+  .border_arg(6px, #5ad8ff);
+}
+
+// 避免编译
+// 有时候我们需要使用一些 LESS无法识别的专有语法, 为了不让LESS编译处理
+// 可以在相应字符串前 加上一个 ~并引号包裹' '
+.test_avoid-process {
+  width: ~'calc(300px - 30px)';
+}
+
+// !important标记继承得来的属性
+.test_important {
+  .test_avoid-process !important;
+}
